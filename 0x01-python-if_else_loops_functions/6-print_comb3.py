@@ -5,6 +5,6 @@ for i in range(1, 90):
             break
     else:
         if (i != 89):
-            print("{}".format(i), end=', ')
+            print("{}".format(str(i).zfill(2)), end=', ')
         else:
-            print("{}".format(i), end= '')
+            print("{}".format(str(i)).zfill(2)), end= '')
