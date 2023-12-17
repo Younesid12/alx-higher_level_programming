@@ -7,4 +7,4 @@ for i in range(1, 90):
         if (i != 89):
             print("{}".format(str(i).zfill(2)), end=', ')
         else:
-            print("{}".format(str(i).zfill(2)), end='')
+            print("{}".format(str(i).zfill(2)))
