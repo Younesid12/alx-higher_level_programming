@@ -7,7 +7,8 @@ class Square:
     def __init__(self, size=0):
         """Inizialization of a new square.
 
-        size: must be an integer greater than 0
+        Args:
+            size (int): must be an integer greater than 0
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
