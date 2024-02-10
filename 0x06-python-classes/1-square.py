@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-"""Defines a class square"""
+"""Defines a Square Class"""
 
 
 class Square:
-    """Square representation"""
+    """A class representing a square"""
 
 
     def __init__(self, size):
