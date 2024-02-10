@@ -2,5 +2,5 @@
 
 """defines a Square Class"""
 Class Square:
-    """Square Class definition"""
+    """a class representing a square"""
     pass
