@@ -37,7 +37,7 @@ class Square:
         if self.size == 0:
             print("")
             return
-        for n in range(self.area()):
+        for n in range(1, self.area() + 1):
             print("{}".format("#"), end='')
             if n % self.__size == 0:
                 print()
