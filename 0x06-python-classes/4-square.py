@@ -12,7 +12,7 @@ class Square:
         Args:
             size (int): must be an integer
         """
-        self.size(size)
+        self.size = size
 
     @property
     def size(self):
