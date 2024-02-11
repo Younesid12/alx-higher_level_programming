@@ -39,5 +39,5 @@ class Square:
             return
         for n in range(self.area):
             print("{}".format("#"), end='')
-            if n % self.__size = 0:
+            if n % self.__size == 0:
                 print()
