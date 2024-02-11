@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Defines a Square Class"""
+"""Defines a Square Class."""
 
 
 class Square:
@@ -41,4 +41,3 @@ class Square:
             print("{}".format("#"), end='')
             if n % self.__size = 0:
                 print()
-
