@@ -14,13 +14,13 @@ class Square:
         """
         self.size(size)
 
-    @property:
-        def size(self):
+    @property
+    def size(self):
             """retrieves the size"""
 
             return self.__size
-    @property setter:
-        def size(self, value):
+    @property setter
+    def size(self, value):
             """sets the size attribute.
 
             Args:
@@ -29,7 +29,7 @@ class Square:
 
             if not isinstance(value, int):
                 raise TypeError("size must be an integer")
-            elif size < 0:
+            elif value < 0:
                 raise ValueError("size must be >= 0")
             else:
                 self.__size = value
