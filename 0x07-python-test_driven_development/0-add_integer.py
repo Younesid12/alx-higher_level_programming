@@ -1,17 +1,22 @@
 #!/usr/bin/python3
 
+"""Define a faunction of addition of integers"""
+
+
 def add_integer(a, b=98):
 	"""
 	This function adds two integers.
 
 	Args:
 		a (int or float): The first number.
-	b (int or float): The second number (default is 98).
+		b (int or float): The second number (default is 98).
 
 	Returns:
         	int: The sum of a and b.
+
 	Raises:
 		TypeError: If a or b is not an integer or float.
+
 	Examples:
 	>>> add_integer(1, 2)
 	3
