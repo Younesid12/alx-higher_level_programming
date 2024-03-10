@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-""" defines a function of addition"""
-
-
 def add_integer(a, b=98):
 	"""
 	This function adds two integers.
