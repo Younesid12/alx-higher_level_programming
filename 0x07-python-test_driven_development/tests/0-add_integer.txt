@@ -1,0 +1,21 @@
+Test Case 1:
+Function: add_integer(1, 2)
+Expected Output: 3
+
+Test Case 2:
+Function: add_integer(100, -2)
+Expected Output: 98
+
+Test Case 3:
+Function: add_integer(2)
+Expected Output: 100
+
+Test Case 4:
+Function: add_integer(100.3, -2)
+Expected Output: 98
+
+Test Case 5:
+Function: add_integer(4, "School")
+Expected Output: Traceback (most recent call):
+		 ...
+		 TypeError: b must be an integer
