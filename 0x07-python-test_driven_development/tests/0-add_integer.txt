@@ -11,7 +11,7 @@
 10
 
 # Test Case 4: Handling floats by casting to integers
->>> add_integers(100.3, -2)
+>>> add_integer(100.3, -2)
 98
 
 # Test Case 5: Raising TypeError for non-integer inputs
