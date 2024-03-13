@@ -19,9 +19,9 @@ def say_my_name(first_name, last_name=""):
 
     Examples:
         >>> say_my_name('Younes', 'Idomar')
-        Younes Idomar
+        My name is Younes Idomar
         >>> say_my_name('Younes') # doctest: +NORMALIZE_WHITESPACE
-        Younes
+        My name is Younes
         >>> say_my_name(2, 'Idomar')
         Traceback (most recent call last):
         ...
@@ -35,5 +35,5 @@ def say_my_name(first_name, last_name=""):
         raise TypeError("first_name must be a string")
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
-    print("{} {}".format(first_name, last_name))
+    print("My name is {} {}".format(first_name, last_name))
 
