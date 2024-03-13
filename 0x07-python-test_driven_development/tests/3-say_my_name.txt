@@ -1,0 +1,19 @@
+# Test Case 1: checking if it prints the fullname successfully
+>>> say_my_name('Younes', 'Idomar')
+Younes Idomar
+
+# Test Case 2: checking if it prints the first name after not recieving second argument
+>>> say_my_name('Younes') # doctest: +NORMALIZE_WHITESPACE
+Younes
+
+# Test Case 3: checking if it raises a TypeError with its special msg when first_name isn't a str
+>>> say_my_name(2, 'Idomar')
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+# Test Case 4: checking if it raises a TypeError with its msg when last_name recieves a non-string value
+>>> say_my_name('Younes', 4)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
