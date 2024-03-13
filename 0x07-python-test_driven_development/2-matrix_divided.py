@@ -2,7 +2,7 @@
 
 """Defines a function that devides all elements of a matrix. """
 
-import doctest
+
 def matrix_divided(matrix, div):
    
     """ Divides all elements of a matrix.
