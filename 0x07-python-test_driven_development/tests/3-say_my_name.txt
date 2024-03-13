@@ -1,10 +1,10 @@
 # Test Case 1: checking if it prints the fullname successfully
 >>> say_my_name('Younes', 'Idomar')
-Younes Idomar
+My name is Younes Idomar
 
 # Test Case 2: checking if it prints the first name after not recieving second argument
 >>> say_my_name('Younes') # doctest: +NORMALIZE_WHITESPACE
-Younes
+My name is Younes
 
 # Test Case 3: checking if it raises a TypeError with its special msg when first_name isn't a str
 >>> say_my_name(2, 'Idomar')
