@@ -3,8 +3,7 @@
 """Defines a function that devides all elements of a matrix. """
 
 
-def matrix_divided(matrix, div):
-   
+def matrix_divided(matrix, div):  
     """
     Divides all elements of a matrix.
 
@@ -14,6 +13,10 @@ def matrix_divided(matrix, div):
 
     Returns:
         a new matrix composining of those numbers divided by div
+    
+    raises:
+        TypeError: if not alist of lists of integers or floats and or if the length of each row differs
+        ZeroDivisionError: if div is 0
 
     Examples:
         >>> matrix = [
