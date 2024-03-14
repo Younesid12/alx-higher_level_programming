@@ -2,6 +2,7 @@
 
 """ Defines a function ."""
 
+
 def print_square(size):
     """ prints a square with the character #.
 
@@ -50,6 +51,6 @@ def print_square(size):
     if isinstance(size, float) and size < 0:
         raise TypeError("size must be an integer")
     for n in range(size):
-            for _ in range(size):
-                print("{}".format("#"), end='')
-            print()
+        for _ in range(size):
+            print("{}".format("#"), end='')
+        print()
