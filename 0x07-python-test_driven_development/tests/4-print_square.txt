@@ -1,4 +1,7 @@
-import 4-print_square
+import sys
+sys.path.append("..")
+
+import "4-print_square"
 # Test Case 1: defining the function
 def print_square(size):
     if not isinstance(size, int):
