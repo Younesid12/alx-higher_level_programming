@@ -14,8 +14,8 @@ def text_indentation(text):
         TypeError: text must be a string
 
     Examples:
-        >>> text_indentation("Hello, how are you doing? \
-                do you think. you need: Time")
+        >>> text_indentation("Hello, how are you doing? "
+        ...                 "do you think. you need: Time")
         Hello, how are you doing?
         do you think.
         you need:
@@ -31,8 +31,7 @@ def text_indentation(text):
         if n == 0:
             print(text[n], end='')
             continue
-        if (text[n - 1] == '.' or text[n - 1] == '?' or text[n - 1] == ':' \
-                or text[n - 1] == ' ') and text[n] == ' ':
+        if text[n - 1] in [':', '?', '.', ' '] and text[n] == ' ':
             continue
         print(text[n], end='')
         if text[n] == '.' or text[n] == '?' or text[n] == ':':
