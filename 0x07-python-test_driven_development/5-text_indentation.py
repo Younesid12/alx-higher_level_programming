@@ -36,3 +36,5 @@ def text_indentation(text):
         if text[n] == '.' or text[n] == '?' or text[n] == ':':
             print()
             print()
+        if n == len(text) - 1:
+            print()
