@@ -1,5 +1,5 @@
 Test Case 1: passing a plain string
->>> text_indenation('Hello, How are you? do you think. you need: time')
+>>> text_indentation('Hello, How are you? do you think. you need: time')
 Hello, how are you?
 
 do you think.
@@ -9,7 +9,7 @@ you need:
 time
 
 Test Case 2: passing a non-string arguemnt, and checking if it raises a TypeError
->>> text_indentaion(6)
+>>> text_indentation(6)
 Tracaeback: (most recent call last):
 ...
 TypeError: text must be a string
