@@ -30,7 +30,7 @@ def text_indentation(text):
         if n == 0:
             print(text[n], end='')
             continue
-        if (text[n - 1] == '.' or text[n - 1] == '?' or text[n - 1] == ':') and text[n] == ' ':
+        if (text[n - 1] == '.' or text[n - 1] == '?' or text[n - 1] == ':' or text[n - 1] == ' ') and text[n] == ' ':
             continue
         print(text[n], end='')
         if text[n] == '.' or text[n] == '?' or text[n] == ':':
