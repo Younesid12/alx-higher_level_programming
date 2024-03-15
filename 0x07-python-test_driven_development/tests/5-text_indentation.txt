@@ -1,4 +1,5 @@
 Test Case 1: passing a plain string
+>>> from 5-text_indentation import text_indentation
 >>> text_indentation('Hello, How are you? do you think. you need: time')
 Hello, how are you?
 
