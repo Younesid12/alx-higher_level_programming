@@ -24,11 +24,13 @@ def text_indentation(text):
             ...
         TypeError: text must be a string
     """
+    if type(text) is not str:
+        raise TypeError("text must be a string")
     for n in range(len(text)):
         if n == 0:
             print(text[n], end='')
             continue
-        if text[n - 1] == '.' or text[n - 1] == '?' or text[n - 1] == ':' and text[n] == ' ':
+        if (text[n - 1] == '.' or text[n - 1] == '?' or text[n - 1] == ':') and text[n] == ' ':
             continue
         print(text[n], end='')
         if text[n] == '.' or text[n] == '?' or text[n] == ':':
