@@ -12,6 +12,17 @@ def text_indentation(text):
 
     Raises:
         TypeError: text must be a string
+
+    Examples:
+        >>> text_indentation("Hello, how are you doing? do you think. you need: Time")
+        Hello, how are you doing?
+        do you think.
+        you need:
+        Time
+        >>> text_indentation(3)
+        Trcaeback: (most rexent call last):
+            ...
+        TypeError: text must be a string
     """
     for n in range(len(text)):
         if n == 0:
