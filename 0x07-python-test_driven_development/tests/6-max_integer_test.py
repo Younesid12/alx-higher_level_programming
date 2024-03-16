@@ -4,7 +4,7 @@
 
 
 import unittest
-class TestCase(unittest.TestCase):
+class TestMaxInteger(unittest.TestCase):
 
     """ A Test Call that defins some tests for max_integer(list=[]): """
 
