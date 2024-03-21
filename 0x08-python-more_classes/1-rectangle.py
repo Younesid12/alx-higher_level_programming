@@ -3,6 +3,7 @@
 """Defines a class Rectangle."""
 
 
+
 class Rectangle():
     """ defines a Rectangle """
     def __init__(self, width=0, height=0):
@@ -25,7 +26,7 @@ class Rectangle():
         """ sets the value to width attribute """
         if type(value) != int:
             raise TypeError("width must be an integer")
-        elif width < 0:
+        elif value < 0:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
@@ -40,7 +41,7 @@ class Rectangle():
         """ sets height a new value """
         if type(height) != int:
             raise TypeError("height must be an integer")
-        elif height < 0:
+        elif value < 0:
             raise ValueError("width must be >= 0")
         else:
             self.__height = value
