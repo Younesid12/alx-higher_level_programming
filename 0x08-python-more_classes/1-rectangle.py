@@ -37,6 +37,7 @@ class Rectangle():
 
     @height.setter
     def height(self, value):
+        """ sets height a new value """
         if type(height) != int:
             raise TypeError("height must be an integer")
         elif height < 0:
