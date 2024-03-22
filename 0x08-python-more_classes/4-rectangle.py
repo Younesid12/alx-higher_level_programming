@@ -19,6 +19,7 @@ class Rectangle():
             for _ in range(self.__height):
                 char_hash.append('#' * self.__width)
             return "\n".join(char_hash)
+
     def __repr__(self):
         """returns the strig representation of the rectangle."""
         return f"Rectangle({self.__width}, {self.__height})"
