@@ -23,6 +23,7 @@ class Rectangle():
     def __repr__(self):
         """returns the strig representation of the rectangle."""
         return f"Rectangle({self.__width}, {self.__height})"
+
     def __del__(self):
         """invoked when an instance is deleted"""
         print("Bye rectangle...")
