@@ -25,7 +25,7 @@ class Rectangle():
         return f"Rectangle({self.__width}, {self.__height})"
     def __del__(self):
         """invoked when an instance is deleted"""
-        return "Bye rectangle..."
+        print("Bye rectangle...")
 
     @property
     def width(self):
