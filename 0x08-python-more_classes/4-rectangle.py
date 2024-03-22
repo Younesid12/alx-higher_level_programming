@@ -20,7 +20,7 @@ class Rectangle():
                 char_hash.append('#' * self.__width)
             return "\n".join(char_hash)
     def __repr__(self):
-        """ returns a string representation of the rectangle"""
+        """returns a string representation of the rectangle"""
         return f"Rextangle{self.__width, self.__height)"
 
     @property
