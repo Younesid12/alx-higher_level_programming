@@ -21,7 +21,7 @@ class Rectangle():
             return "\n".join(char_hash)
     def __repr__(self):
         """returns the strig representation of the rectangle."""
-        return f"Rectangle({self.__width}, {self__height})"
+        return f"Rectangle({self.__width}, {self.__height})"
 
     @property
     def width(self):
