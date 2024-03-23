@@ -21,7 +21,7 @@ class Rectangle():
         else:
             n = ""
             for _ in range(self.__height):
-                n += f"{self.__height * self.__width}\n"
+                n += f"{self.print_symbol * self.__width}\n"
                 return n
 
     def __repr__(self):
