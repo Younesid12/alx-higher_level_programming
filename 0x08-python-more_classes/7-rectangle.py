@@ -22,7 +22,7 @@ class Rectangle():
             n = ""
             for _ in range(self.__height):
                 n += f"{self.print_symbol * self.__width}\n"
-                return n
+            return n
 
     def __repr__(self):
         """returns the strig representation of the rectangle."""
