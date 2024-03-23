@@ -22,9 +22,9 @@ class Rectangle():
             n = ""
             for i in range(self.__height):
                 if i is not self.__height - 1:
-                    n += f"{self.print_symbol * self.__width}\n"
+                    n += f"{str(self.print_symbol) * self.__width}\n"
                 else:
-                    n += f"{self.print_symbol * self.__width}"
+                    n += f"{str(elf.print_symbol) * self.__width}"
             return n
 
     def __repr__(self):
