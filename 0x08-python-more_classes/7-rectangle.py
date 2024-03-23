@@ -24,7 +24,7 @@ class Rectangle():
                 if i is not self.__height - 1:
                     n += f"{str(self.print_symbol) * self.__width}\n"
                 else:
-                    n += f"{str(elf.print_symbol) * self.__width}"
+                    n += f"{str(self.print_symbol) * self.__width}"
             return n
 
     def __repr__(self):
