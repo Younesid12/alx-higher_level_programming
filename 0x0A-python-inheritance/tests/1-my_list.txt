@@ -63,6 +63,6 @@ My_list is a subclass of list class, thus features the same methods and attribut
 [-1, 1, 2, 3, 4, 5]
 
 # Test case 4: checks if it returns an empty list when an empty list is passed
->>> my_list = MyList
+>>> my_list = MyList()
 >>> my_list.print_sorted()
 []
