@@ -1,40 +1,56 @@
-MyList = import('1-my_list').MyList
-
-
-    >>> my_list = MyList()
-
-    >>> my_list.append(1)
-
-    >>> my_list.append(4)
-
-    >>> my_list.append(2)
-
-    >>> my_list.append(3)
-
-    >>> my_list.append(5)
+# test case 1: checking if My_list will return an empty list when when instantiated with 0 arguemnt
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = My_list()
+>>> type(my_list)
+<class '1-my_list.MyList'>
 >>> print(my_list)
-    [1, 4, 2, 3, 5]
+[]
+
+# Test case 2: checking if it can return a list with the values of the iterable  passed
+>>> my_list = MyList[1, 2, 4]
+>>> print(my_list)
+>>> [1, 2, 4]
+
+# Test case 3: checking if it raises a TypeError when passing None
+>>> my_list = MyList(None)
+Traceback (most recent call last):
+TypeError: 'NoneType' object is not iterable
+
+# Test case 4: checking if TypeError will be raised for any more than one instantiation arguements
+>>> my_list = MyList([1, 4], [3, 4])
+Traceback (most recent call last):
+TypeError: list() takes at most 1 arguemnt (2 given)
+
+Usage
+=====
+
+My_list is a subclass of list class, thus features the same methods and attributes
+
+# Test case 5: checking if methods of a list can be used with the subclass
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> print(my_list)
+[1, 2, 3]
+ 
+# Test Case 6: tests if it can remove an item
+>>> my_list.remove(1)
+>>> print(my_list)
+[2, 3]
+
+''print_sorted'' method
+=======================
+
+# Test Case 1: checking if print_sorted prints the list in a sorted manner
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
 >>> my_list.print_sorted()
-    [1, 2, 3, 4, 5]
+[1, 2, 3, 4, 5]
+
+# Test Case 2: checks if print_sorted doesn't modify the list
 >>> print(my_list)
-    [1, 4, 2, 3, 5]
->>> my_list.clear()
->>> my_list.append(-1)
-
-    >>> my_list.append(25)
-
-    >>> my_list.append(73)
-
-    >>> my_list.append(-3)
-
-    >>> my_list.append(0)
-
->>> print(my_list)
-    [-1, 25, 73, -3, 0]
->>> my_list.print_sorted()
-    [-3, -1, 0, 25, 73]
->>> print(my_list)
-    [-1, 25, 73, -3, 0]
->>> my_list.clear()
->>> my_list.print_sorted()
-    []
+[1, 4, 2, 3, 5]
