@@ -56,3 +56,14 @@ My_list is a subclass of list class, thus features the same methods and attribut
 # Test Case 2: checks if print_sorted doesn't modify the list
 >>> print(my_list)
 [1, 4, 2, 3, 5]
+
+# Test Case 3: checks if print_sorted sorts when negative args passed
+>>> my_list.append(-1)
+>>> my_list.sorted()
+[-1, 1, 2, 3, 4, 5]
+
+# Test case 4: checks if it returns an empty list when an empty list is passed
+>>> my_list = MyList
+>>> my_list = []
+>>> my_list.print_sorted
+[]
