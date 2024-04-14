@@ -64,6 +64,5 @@ My_list is a subclass of list class, thus features the same methods and attribut
 
 # Test case 4: checks if it returns an empty list when an empty list is passed
 >>> my_list = MyList
->>> my_list = []
 >>> my_list.print_sorted()
 []
