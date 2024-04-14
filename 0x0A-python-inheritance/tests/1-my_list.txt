@@ -7,9 +7,9 @@
 []
 
 # Test case 2: checking if it can return a list with the values of the iterable  passed
->>> my_list = MyList[1, 2, 4]
+>>> my_list = MyList([1, 2, 4])
 >>> print(my_list)
->>> [1, 2, 4]
+[1, 2, 4]
 
 # Test case 3: checking if it raises a TypeError when passing None
 >>> my_list = MyList(None)
