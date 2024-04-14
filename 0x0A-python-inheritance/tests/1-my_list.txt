@@ -1,4 +1,4 @@
-```MyList = import('1-my_list').MyList
+MyList = import('1-my_list').MyList
 
 
     >>> my_list = MyList()
@@ -37,4 +37,4 @@
     [-1, 25, 73, -3, 0]
 >>> my_list.clear()
 >>> my_list.print_sorted()
-    []```
+    []
