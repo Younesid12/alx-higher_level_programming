@@ -19,7 +19,7 @@ TypeError: 'NoneType' object is not iterable
 # Test case 4: checking if TypeError will be raised for any more than one instantiation arguements
 >>> my_list = MyList([1, 4], [3, 4])
 Traceback (most recent call last):
-TypeError: list() takes at most 1 arguemnt (2 given)
+TypeError: list() takes at most 1 arguemnt, got 2
 
 Usage
 =====
@@ -31,12 +31,12 @@ My_list is a subclass of list class, thus features the same methods and attribut
 >>> my_list.append(1)
 >>> my_list.append(2)
 >>> print(my_list)
-[1, 2, 3]
+[1, 2]
  
 # Test Case 6: tests if it can remove an item
 >>> my_list.remove(1)
 >>> print(my_list)
-[2, 3]
+[2]
 
 ''print_sorted'' method
 =======================
