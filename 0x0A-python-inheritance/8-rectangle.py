@@ -2,7 +2,7 @@
 """ Defines a Rectangle class"""
 
 
-n = __import__("7-base_geometry.py"). BaseGeometry
+n = __import__("7-base_geometry.py").BaseGeometry
 class Rectangle(n):
     """Rectangle class"""
     def __init__(self, width, height):
