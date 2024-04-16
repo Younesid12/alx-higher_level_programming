@@ -24,3 +24,33 @@ ValueError: Hi must be greater than 0
 
 # Test Case 5: checking if it does't rise any exception if no less than 0 or non-integer value is passed as arg
 >>> bg.integer_validator('Hello', 6)
+
+# Test Case 6: checking if it raises a TypeError wehen no arguments are not passed
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+# Test Case 7: checking if it raises a ValueError when 0 passes as a value of value parameter
+>>> bg.integer_validator('Hi', 0)
+Traceback (most recent call last):
+...
+ValueError: Hi must be greater than 0
+
+# Test Case 8: checking the method raises a TypeError when a Tuple, list, bool, None are passed as value of value parameter
+>>> bg.integer_validator('Hello', (4,))
+Traceback (most recent call last):
+...
+TypeError: Hello must be an integer
+>>> bg.integer_validator("Hello", [2])
+Traceback: (most recent call last):
+...
+TypeError: Hello must be an integer
+>>> bg.integer_validator('Hello', True)
+Traceback: (most recent call last):
+...
+TypeError: Hello must be an integer
+>>> bg.integer_validator("Hello", None)
+Traceback: (most recent call last):
+...
+TypeError: Hello must be an integer
