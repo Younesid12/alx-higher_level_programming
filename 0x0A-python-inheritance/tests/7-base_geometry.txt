@@ -29,7 +29,7 @@ ValueError: Hi must be greater than 0
 >>> bg.integer_validator()
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+TypeError: bg.integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 # Test Case 7: checking if it raises a ValueError when 0 passes as a value of value parameter
 >>> bg.integer_validator('Hi', 0)
@@ -43,14 +43,14 @@ Traceback (most recent call last):
 ...
 TypeError: Hello must be an integer
 >>> bg.integer_validator("Hello", [2])
-Traceback: (most recent call last):
+Traceback (most recent call last):
 ...
 TypeError: Hello must be an integer
 >>> bg.integer_validator('Hello', True)
-Traceback: (most recent call last):
+Traceback (most recent call last):
 ...
 TypeError: Hello must be an integer
 >>> bg.integer_validator("Hello", None)
-Traceback: (most recent call last):
+Traceback (most recent call last):
 ...
 TypeError: Hello must be an integer
