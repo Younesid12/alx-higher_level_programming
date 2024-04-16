@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
-"""defines a class a class"""
+"""defines Squar class"""
 
 
 Rectangle = __import__('9-rectangle').Rectangle
