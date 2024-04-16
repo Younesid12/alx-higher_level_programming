@@ -9,5 +9,5 @@ class Square(Rectangle):
     """class definition"""
     def __init__(self, size):
         """initializes size"""
-        supper().__init__(size, size)
+        super().__init__(size, size)
         self.__size = size
