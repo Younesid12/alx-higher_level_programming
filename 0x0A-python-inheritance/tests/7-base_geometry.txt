@@ -20,8 +20,7 @@ TypeError: Hello must be an integer
 >>> bg.integer_validator('Hi', -1)
 Traceback (most recent call last):
 ...
-ValueType: Hi must be greater than 0
+ValueError: Hi must be greater than 0
 
 # Test Case 5: checking if it does't rise any exception if no less than 0 or non-integer value is passed as arg
 >>> bg.integer_validator()
->>>
