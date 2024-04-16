@@ -23,4 +23,4 @@ Traceback (most recent call last):
 ValueError: Hi must be greater than 0
 
 # Test Case 5: checking if it does't rise any exception if no less than 0 or non-integer value is passed as arg
->>> bg.integer_validator()
+>>> bg.integer_validator('Hello', 6)
