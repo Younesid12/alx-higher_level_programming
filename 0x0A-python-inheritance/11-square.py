@@ -17,6 +17,6 @@ class Square(Rectangle):
             raise TypeError("size must be an integer")
         else:
             self.__size = size
-    
+
     def __str__(self):
         return f"[Square] {self.__size}/{self.__size}"
