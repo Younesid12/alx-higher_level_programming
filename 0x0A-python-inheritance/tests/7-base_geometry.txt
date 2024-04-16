@@ -1,0 +1,27 @@
+# Test Case 1: checking if BaseGeometry can be instantiated and also checking if we can make an object of it
+>>> Base_geometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = Base_geometry()
+>>> type(bg) is Base_geometry
+True
+
+# Test Case 2: checking if area method raises an exception with the area() is not implemented massege
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+# Test Case 3: checking if integer_validator method raises a TypeError with the message <name> must be an integer, when value is not integer
+>>> bg.integer_validator('Hello', 'Hi')
+Traceback (most recent call last):
+...
+TypeError: Hello must be an integer
+
+# Test Case 4: checking if integer_validator method raises a valueError with the message <name> must be greater than 0
+>>> bg.integer_validator('Hi', -1)
+Traceback (most recent call last):
+...
+ValueType: Hi must be greater than 0
+
+# Test Case 5: checking if it does't rise any exception if no less than 0 or non-integer value is passed as arg
+>>> bg.integer_validator()
+>>>
