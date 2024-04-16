@@ -9,5 +9,11 @@ class Square(Rectangle):
     """class definition"""
     def __init__(self, size):
         """initializes size"""
-        super().__init__(size, size)
-        self.__size = size
+        try:
+            super().__init__(size, size)
+        except ValueError:
+            raise ValueError("size must be greater than 0")
+        except TypeError:
+            raise TypeError("size must be an integer")
+        else:
+            self.__size = size
