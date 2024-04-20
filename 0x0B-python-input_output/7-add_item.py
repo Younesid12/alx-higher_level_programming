@@ -7,9 +7,10 @@ import json
 save_to_json_file = __import__ ('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-liSt = []
+Try:
+    liSt = load_from_json_file('add_item_json')
+except FileNotFoundError:
+    liSt = []
 for i in range(1, len(sys.argv)):
-        liSt.append(sys.argv[i])
-with open('add_item.json', 'w', encoding='utf-8') as n:
-        save_to_json_file(liSt, 'add_item.json')
-load_from_json_file('add_item.json')
+    liSt.append(sys.argv[i])
+save_to_json_file(liSt, 'add_item.json')
