@@ -10,9 +10,10 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """retrieves a dictionary representation of a Student instance"""
+        """retrieves a dictionary
+        representation of a Student instance"""
         data = {}
-        if type(attrs) is list and all(type(element) == str for element in attrs):
+        if isinstance(attrs, list)  and all(isinstance(element, str) or element in attrs):
             for value in attrs:
                 if value in self.__dict__:
                     data[value] = self.__dict__[value]
