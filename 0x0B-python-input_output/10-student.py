@@ -13,7 +13,7 @@ class Student:
         """retrieves a dictionary
         representation of a Student instance"""
         data = {}
-        if isinstance(attrs, list)  and all(isinstance(element, str) or element in attrs):
+        if isinstance(attrs, list)  and all(isinstance(element, str) for element in attrs):
             for value in attrs:
                 if value in self.__dict__:
                     data[value] = self.__dict__[value]
