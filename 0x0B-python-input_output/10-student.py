@@ -1,8 +1,4 @@
 #!/usr/bin/python3
-"""defines student class"""
-
-
-#!/usr/bin/python3
 """defines a class student"""
 
 
@@ -20,6 +16,6 @@ class Student:
             for value in attrs:
                 if value in self.__dict__:
                     data += self.__dict__[value]
-        if data == {}:
+        if len(data) == 0:
             return self.__dict__
         return data
