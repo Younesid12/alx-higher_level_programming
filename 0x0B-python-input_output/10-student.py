@@ -11,8 +11,8 @@ class Student:
 
     def to_json(self, attrs=None):
         """etrieves a dictionary representation of a Student instance"""
+        data = {}
         if type(attrs) is list:
-            data = {}
             for value in attrs:
                 if value in self.__dict__:
                     data += self.__dict__[value]
