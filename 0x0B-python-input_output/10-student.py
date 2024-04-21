@@ -16,6 +16,5 @@ class Student:
             for value in attrs:
                 if value in self.__dict__:
                     data[value] = self.__dict__[value]
-        if len(data) == 0:
-            return self.__dict__
-        return data
+            return data
+        return self.__dict__
