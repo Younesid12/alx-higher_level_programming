@@ -15,7 +15,7 @@ class Student:
         if type(attrs) is list:
             for value in attrs:
                 if value in self.__dict__:
-                    data += self.__dict__[value]
+                    data[value]  = self.__dict__[value]
         if len(data) == 0:
             return self.__dict__
         return data
