@@ -9,7 +9,7 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """initializes the instance's attributes of this class"""
         super().__init__(id)
-        elif not isinstance(width, int):
+        if not isinstance(width, int):
             raise TypeError("width must be an integer")
         elif not isinstance(height, int):
             raise TypeError("height must be an integer")
