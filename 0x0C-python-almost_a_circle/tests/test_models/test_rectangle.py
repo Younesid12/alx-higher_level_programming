@@ -47,15 +47,15 @@ class TestRectangle(unittest.TestCase):
         raised_exception = context.exception
         self.assertEqual(str(raised_exception), "height must be an integer")
         with self.assertRaises(TypeError) as context:
-            rectangle('3', 2)
+            Rectangle('3', 2)
         raised_exception = context.exception
         self.assertEqual(str(raised_exception), "width must be an integer")
         with self.assertEqual(TypeError) as context:
-            rectangle(10, 3, 'hello')
+            Rectangle(10, 3, 'hello')
         raised_exception = context.exception
         self.assertEqual(str(raised_exception), "x must be an integer")
         with self.assertRaises(TypeError) as context:
-            rectangle(10, 3, 4, 'nice')
+            Rectangle(10, 3, 4, 'nice')
         raised_context = context.exception
         self.assertEqual(str(raised_exception), "y must be an integer")
 
@@ -65,11 +65,11 @@ class TestRectangle(unittest.TestCase):
         variables and checks if the expected message is
         accompanied with the exception"""
         with self.assertRaises(ValueError) as n:
-            rectangle(-1, 2)
+            Rectangle(-1, 2)
         excep = n.exception
         self.assertEqual(str(excep), "width must be > 0")
         with self.assertRaises(ValueError) as n:
-            rectangle(1, -8)
+            Rectangle(1, -8)
         excep = n.context
         self.assertEqual(str(excep), "height must be > 0")
 
@@ -78,11 +78,11 @@ class TestRectangle(unittest.TestCase):
         when a a negative number is passed as an argument for
         x and y"""
         with self.assertRaises(ValueError) as n:
-            rectangle(10, 2, -1):
+            Rectangle(10, 2, -1):
         excep = n.context
         self.assertEqual(str(excep), "x must be >= 0")
         with self.assetRaises(ValueError) as n:
-            rectangle(1, 2, 3, -2)
+            Rectangle(1, 2, 3, -2)
         excep = n.context
         self.assertEqual(str(excep), "y must be >= 0")
 
@@ -119,3 +119,12 @@ class TestRectangle(unittest.TestCase):
         excep = n.context
         self.assertEqual(str(excep), "y must be >= 0")
 
+    def test_area(self):
+        """tests if area method actually returns the area of the rectangle
+        instance"""
+        n = Rectangle(3, 2)
+        self.assertEqual(n.area(), 6)
+        n1 = Rectangle(2, 10)
+        self.assertEqual(n1.area(), 20)
+        n2 = Rectangle(8, 7, 0, 0, 12)
+        self.assertEqual(n2.area(), 56)
