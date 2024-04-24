@@ -14,7 +14,7 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-    @propery
+    @property
     def width(self):
         """gets the width value"""
         return self.__width
