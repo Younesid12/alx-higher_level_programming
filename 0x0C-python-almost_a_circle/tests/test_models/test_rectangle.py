@@ -70,7 +70,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(str(excep), "width must be > 0")
         with self.assertRaises(ValueError) as n:
             Rectangle(1, -8)
-        excep = n.context
+        excep = n.exception
         self.assertEqual(str(excep), "height must be > 0")
 
     def test_x_y_valueError(self):
@@ -78,45 +78,45 @@ class TestRectangle(unittest.TestCase):
         when a a negative number is passed as an argument for
         x and y"""
         with self.assertRaises(ValueError) as n:
-            Rectangle(10, 2, -1):
-        excep = n.context
+            Rectangle(10, 2, -1)
+        excep = n.exception
         self.assertEqual(str(excep), "x must be >= 0")
         with self.assetRaises(ValueError) as n:
             Rectangle(1, 2, 3, -2)
-        excep = n.context
+        excep = n.exception
         self.assertEqual(str(excep), "y must be >= 0")
 
     def test_setter(self):
-    """tests if TypeError is raised when setting the first
-    fourth variables(parameters) using setter methods
-    this has to do with the first fourth parameters only"""
-    with self.assertRaises(TypeError) as context:
-        self.height('hello')
-    raised_exception = context.exception
-    self.assertEqual(str(raised_exception), "height must be an integer")
-    with self.assertRaises(TypeError) as context:
-        self.width('hello')
-    raised_exception = context.exception
-    self.assertEqual(str(raised_exception), "width must be an integer")
-    with self.assertEqual(TypeError) as context:
-        self.x('hello')
-    raised_exception = context.exception
-    self.assertEqual(str(raised_exception), "x must be an integer")
-    with self.assertRaises(TypeError) as context:
-        self.width('nice')
-    raised_context = context.exception
-    self.assertEqual(str(raised_exception), "y must be an integer")
+        """tests if TypeError is raised when setting the first
+        fourth variables parameters using setter methods this has
+        to do with the first fourth parameters only"""
+        with self.assertRaises(TypeError) as context:
+            context.height('hello')
+        raised_exception = context.exception
+        self.assertEqual(str(raised_exception), "height must be an integer")
+        with self.assertRaises(TypeError) as context:
+            context.width('hello')
+        raised_exception = context.exception
+        self.assertEqual(str(raised_exception), "width must be an integer")
+        with self.assertEqual(TypeError) as context:
+            context.x('hello')
+        raised_exception = context.exception
+        self.assertEqual(str(raised_exception), "x must be an integer")
+        with self.assertRaises(TypeError) as context:
+            context.width('nice')
+        raised_context = context.exception
+        self.assertEqual(str(raised_exception), "y must be an integer")
 
     def test_setter_x_y(self):
         """tests a VlueError is raised when x and y are set a
         negative value by setter"""
         with self.assertRaises(ValueError) as n:
-            self.x(-1)
-        excep = n.context
+            n.x(-1)
+        excep = n.exception
         self.assertEqual(str(excep), "x must be >= 0")
         with self.assetRaises(ValueError) as n:
-            self.y(-2)
-        excep = n.context
+            n.y(-2)
+        excep = n.exception
         self.assertEqual(str(excep), "y must be >= 0")
 
     def test_area(self):
@@ -128,3 +128,11 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(n1.area(), 20)
         n2 = Rectangle(8, 7, 0, 0, 12)
         self.assertEqual(n2.area(), 56)
+
+    def test_display(self):
+        """tests if it display function prints in stdout the
+        Rectangle instance with the character #"""
+        r1 = Rectangle(4, 6)
+        self.assertEqual(r1.display(), "####\n####\n####\n####\n")
+        r2 = Rectangle(2, 2)
+        self.assertEqual(r2.display, "##\n##\n")
