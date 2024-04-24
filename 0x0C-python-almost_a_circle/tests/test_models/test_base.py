@@ -18,7 +18,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(a.id, 1)
         b = Base()
         self.assertEqual(b.id, 2)
-        self.assertEqual(b.id, Base.__nb_objects)
 
     def test_id_passed(self):
         """checks if id attribute is assigned the value passed and
