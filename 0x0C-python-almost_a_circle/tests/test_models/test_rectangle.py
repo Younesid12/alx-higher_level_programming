@@ -90,33 +90,35 @@ class TestRectangle(unittest.TestCase):
         """tests if TypeError is raised when setting the first
         fourth variables parameters using setter methods this has
         to do with the first fourth parameters only"""
+        n = Rectangle(1, 2, 3, 4)
         with self.assertRaises(TypeError) as context:
-            context.height('hello')
+            n.height('hello')
         raised_exception = context.exception
         self.assertEqual(str(raised_exception), "height must be an integer")
         with self.assertRaises(TypeError) as context:
-            context.width('hello')
+            n.width('hello')
         raised_exception = context.exception
         self.assertEqual(str(raised_exception), "width must be an integer")
-        with self.assertEqual(TypeError) as context:
-            context.x('hello')
+        with self.assertRaises(TypeError) as context:
+            n.x('hello')
         raised_exception = context.exception
         self.assertEqual(str(raised_exception), "x must be an integer")
         with self.assertRaises(TypeError) as context:
-            context.width('nice')
+            n.width('nice')
         raised_context = context.exception
         self.assertEqual(str(raised_exception), "y must be an integer")
 
     def test_setter_x_y(self):
         """tests a VlueError is raised when x and y are set a
         negative value by setter"""
-        with self.assertRaises(ValueError) as n:
+        n = Rectangle(1, 2, 3, 4)
+        with self.assertRaises(ValueError) as context:
             n.x(-1)
-        excep = n.exception
+        excep = context.exception
         self.assertEqual(str(excep), "x must be >= 0")
-        with self.assetRaises(ValueError) as n:
+        with self.assetRaises(ValueError) as context:
             n.y(-2)
-        excep = n.exception
+        excep = context.exception
         self.assertEqual(str(excep), "y must be >= 0")
 
     def test_area(self):
@@ -133,6 +135,6 @@ class TestRectangle(unittest.TestCase):
         """tests if it display function prints in stdout the
         Rectangle instance with the character #"""
         r1 = Rectangle(4, 6)
-        self.assertEqual(r1.display(), "####\n####\n####\n####\n")
+        self.assertEqual(f"{r1.display()}", "####\n####\n####\n####\n")
         r2 = Rectangle(2, 2)
-        self.assertEqual(r2.display, "##\n##\n")
+        self.assertEqual(f"{r2.display()}", "##\n##\n")
