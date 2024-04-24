@@ -9,6 +9,23 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """initializes the instance's attributes of this class"""
         super().__init__(id)
+        elif not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        elif not isinstance(height, int):
+            raise TypeError("height must be an integer")
+        elif not isinstance(x, int):
+            raise TypeError("x must be an integer")
+        elif not isinstance(y, int):
+            raise TypeError("y must be an integer")
+        elif width <= 0:
+            raise ValueError("width must be > 0")
+        elif height <= 0:
+            raise ValueError("height must be > 0")
+        elif x < 0:
+            raise ValueError("x must be >= 0")
+        elif y < 0:
+            raise("y must be >= 0")
+
         self.__width = width
         self.__height = height
         self.__x = x
