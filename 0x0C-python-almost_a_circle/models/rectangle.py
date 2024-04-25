@@ -116,7 +116,7 @@ class Rectangle(Base):
                     self.__x = kwargs[key]
                 elif key == 'y':
                     self.__y = kwargs[key]
-                return
+            return
         for i in range(len(args)):
             if i == 0:
                 self.id = args[i]
