@@ -130,4 +130,4 @@ class Rectangle(Base):
                 self.__y = args[i]
     def to_dictionary(self):
         """returns the dictionary representation of a Rectangle"""
-        return Rectangle.__dict__()
+        return self.__dict__
