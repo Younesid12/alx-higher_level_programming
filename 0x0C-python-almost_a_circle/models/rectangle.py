@@ -128,3 +128,6 @@ class Rectangle(Base):
                 self.__x = args[i]
             elif i == 4:
                 self.__y = args[i]
+    def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
+        return Rectangle.__dict__()
