@@ -107,7 +107,7 @@ class Rectangle(Base):
         for i in range(len(args)):
             if i == 0:
                 self.id = args[i]
-            elif i == 1
+            elif i == 1:
                 self.__width = args[i]
             elif i == 2:
                 self.__height = args[i]
