@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """defines a base class"""
 
+import json
+
 
 class Base:
     """Base class"""
@@ -13,3 +15,9 @@ class Base:
         else:
             Base.__nb_objects = Base.__nb_objects + 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation json_string"""
+        data = json.dumps(json_strin)
+        return data
