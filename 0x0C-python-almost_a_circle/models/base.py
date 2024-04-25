@@ -19,5 +19,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """returns the list of the JSON string representation json_string"""
-        data = json.dumps(json_strin)
+        if not json_string:
+            return []
+        data = json.dumps(json_string)
         return data
