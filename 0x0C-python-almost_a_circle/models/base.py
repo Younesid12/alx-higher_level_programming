@@ -21,5 +21,5 @@ class Base:
         """returns the list of the JSON string representation json_string"""
         if not json_string:
             return []
-        data = json.dumps(json_string)
+        data = json.loads(json_string)
         return data
