@@ -20,7 +20,8 @@ class Base:
         """return the JSON string representation of list_dictionaries"""
         if not list_dictionaries:
             return []
-        return json.dumps(list_dictionaries)
+        data = json.dumps(list_dictionaries)
+        return data
 
     @classmethod
     def save_to_file(cls, list_objs):
