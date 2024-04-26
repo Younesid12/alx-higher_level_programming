@@ -30,7 +30,7 @@ class Base:
         filename = cls.__name__ + ".json"
         data = [cls.to_json_string(obj.to_dictionary() for obj in list_objs)]
         with open(filename, 'w', encoding='UTF-8') as n:
-            n.write(str(data))
+            n.write(f"{data})
 
     @staticmethod
     def from_json_string(json_string):
