@@ -46,6 +46,9 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """returns an instance with all attributes already set"""
-        n = cls(1)
+        if 'width' in dictionary:
+            n = cls(1, 2)
+        else:
+            n = cls(1)
         n.update(**dictionary)
         return n
