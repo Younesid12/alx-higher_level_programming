@@ -30,7 +30,7 @@ class Base:
         filename = cls.__name__ + ".json"
         with open(filename, 'a', encoding='UTF-8') as n:
             for i in range(len(list_objs):
-                    n.append(cls.to_json_string(list_objs[i].to_dictionary()))
+                    n.write(cls.to_json_string(list_objs[i].to_dictionary()))
 
     @staticmethod
     def from_json_string(json_string):
