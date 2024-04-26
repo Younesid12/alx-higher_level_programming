@@ -42,3 +42,10 @@ class Base:
             return []
         data = json.loads(json_string)
         return data
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attributes already set"""
+        n = cls(3, 4, 1)
+        n.update(dictionary)
+        return n
