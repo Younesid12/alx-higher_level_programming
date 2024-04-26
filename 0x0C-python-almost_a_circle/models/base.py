@@ -27,9 +27,8 @@ class Base:
         """writes the JSON string representation of list_objs to a file"""
         for i in range(len(list_objs)):
             with open(f"{type(list_objes[i])}.json", 'w', encoding='UTF-8') as n:
-                json.dump(n, to_json_string)
+                n.write(to_json_string())
                 
-
     @staticmethod
     def from_json_string(json_string):
         """returns the list of the JSON string representation json_string"""
