@@ -62,6 +62,6 @@ class Base:
         except FileNotFoundError:
             return []
         else:
-            a = from_json_string(n.read())
+            a = cls.from_json_string(n.read())
             n.close()
-            return [Base.create(**d) for d in a]
+            return [cls.create(**d) for d in a]
